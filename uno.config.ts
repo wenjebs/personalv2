@@ -13,7 +13,7 @@ export default defineConfig({
   shortcuts: [
     {
       'bg-main': 'bg-hex-eef5fc dark:bg-hex-0d1117',
-      'text-main': 'text-hex-555555 dark:text-hex-bbbbbb',
+      'text-main': 'text-hex-323232 dark:text-hex-fbfbfb',
       'text-link': 'text-dark dark:text-white ',
       'border-main': 'border-truegray-300 dark:border-truegray-600',
     },
@@ -36,6 +36,10 @@ export default defineConfig({
       extraProperties: {
         display: 'inline-block',
       },
+      collections: {
+        'twemoji': () => import('@iconify-json/twemoji/icons.json').then(i => i.default),
+        'material-symbols': () => import('@iconify-json/material-symbols/icons.json').then(i => i.default),
+      },
     }),
     presetTypography(),
     presetWebFonts({
@@ -47,6 +51,12 @@ export default defineConfig({
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
   safelist: [
+    'i-twemoji:bento-box',
+    'i-twemoji:turtle',
+    'i-twemoji:anchor',
+    'i-twemoji:camera',
+    'i-twemoji:running-shirt',
+    'i-material-symbols:volunteer-activism',
     'i-ri-file-list-2-line',
     'i-carbon-campsite',
     'i-simple-icons-github',
