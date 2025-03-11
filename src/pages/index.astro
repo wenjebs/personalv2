@@ -1,28 +1,75 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import siteConfig from '@/site-config'
+import Carousel from '@/components/Carousel.vue'
+
+const carouselImages = [
+  {
+    src: '/images/hack2024.png',
+    alt: 'HackNRoll 2024',
+  },
+  {
+    src: '/images/brainhack.png',
+    alt: 'BrainHack 2024',
+  },
+  {
+    src: '/images/eth.png',
+    alt: 'EthGlobal 2024',
+  },
+  {
+    src: '/images/openai.png',
+    alt: 'GovTech x OpenAI',
+  },
+  {
+    src: '/images/psa.png',
+    alt: 'PSA CodeSprint 2024',
+  },
+]
 ---
 
 <BaseLayout description={siteConfig.description}>
   <article class="prose">
-    <h1 class="text-title">Vitesse theme</h1>
-    <p>Vitesse theme for Astro, supports Vue and UnoCSS.</p>
+    <h1 class="text-title">Wen Jie</h1>
+    <p>Hey! Im Wen Jie, a sophomore CS student at the National University of Singapore (NUS)</p>
+    <p>urm.. i love coding :)</p>
+    <!-- <p>Currently, I am learning about web development and software engineering and interning at </p> -->
+    <p>Currently, I'm <b>interning</b> at:</p>
+    <ul>
+      <li>Central Provident Fund (Product Developer Intern)</li>
+    </ul>
     <p>
-      A minimal, SEO-riendly portfolio and blog theme for Astro. It's inspired by <a
-        target="_blank"
-        href="https://antfu.me">antfu.me</a
-      >.
+      <b>Right now</b>, I'm:
     </p>
+    <ul>
+      <li>Taking an introduction to AI & Machine Learning</li>
+      <li>Reading about networking, databases and operating systems</li>
+      <li>
+        Grinding leetcode <div class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji:loudly-crying-face">
+        </div>
+      </li>
+    </ul>
+
     <p>
-      <img width="640" height="360" src="/hero.jpg" alt="Hero Image" />
+      In <b>NUS</b>, I've participated in:
+      <ul>
+        <li>HealthHack 2025</li>
+        <li>HackNRoll 2025</li>
+        <li>GovTech x OpenAI Hackathon 2024</li>
+        <li>ETHGlobal 2024</li>
+        <li>PSA CodeSprint 2024</li>
+        <li>
+          DSTA BrainHack 2024 (Runner Up! <i class="i-fluent-emoji-flat:party-popper"></i>)
+          <li>SDG OpenHack 2024</li>
+          <li>NTU IdeasJam 2024</li>
+          <li>Hack4Good 2024</li>
+          <li>HackNRoll 2024</li>
+        </li>
+      </ul>
     </p>
-    <p>
-      Based on first principles thinking, and you can also see from the picture
-      <sup>👆</sup>, the goal of this theme is to
-      <b>make complex things as simple as possible</b>
-      . So, the core of this theme is the content, and the other elements are just auxiliary.
-    </p>
-    <p>Here are the features you don't need to worry about:</p>
+    <div class="carousel-wrapper">
+      <Carousel client:load images={carouselImages} slidesToShow={2} autoplay={false} autoplaySpeed={5000} gap={16} />
+    </div>
+    <!--
     <ul>
       <li>100 / 100 Lighthouse performance</li>
       <li>Responsive</li>
@@ -44,20 +91,8 @@ import siteConfig from '@/site-config'
         <a target="_blank" href="https://lodash.com/">Lodash</a>
         support
       </li>
-    </ul>
-    <p>
-      By the way, this theme use the <a target="_blank" href="https://unocss.dev/">UnoCSS</a> for style, it's fast.
-    </p>
-    <p>
-      Visit it
-      <a target="_blank" href="https://github.com/kevinwong865/astro-theme-vitesse"> on GitHub </a>
-      to fork the repository, read the docs or one-click deploy on Netlify.
-    </p>
-    <p>
-      If you like Vitesse theme for Astro, please
-      <a target="_blank" href="https://github.com/kevinwong865"> click follow </a>
-      for me.
-    </p>
+    </ul> -->
+
     <hr class="hr-line" />
     <p>Find me on</p>
     <p class="flex gap-x-4 gap-y-2 flex-wrap">
@@ -78,3 +113,23 @@ import siteConfig from '@/site-config'
     </p>
   </article>
 </BaseLayout>
+
+<style>
+  .carousel-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 2rem 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+  }
+
+  /* For larger screens, make the carousel wider */
+  @media (min-width: 768px) {
+    .carousel-wrapper {
+      width: 120%; /* Wider than container */
+      max-width: 1400px;
+    }
+  }
+</style>

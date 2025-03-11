@@ -1,40 +1,24 @@
 export const siteConfig = {
-  author: 'Kevin Wong',
-  title: 'Vitesse theme for Astro',
+  author: 'Wen Jie',
+  title: 'Wen Jie',
   subtitle: 'Vitesse theme for Astro, supports Vue and UnoCSS.',
-  description: 'A Minimal, SEO-friendly portfolio and blog theme for Astro.',
+  description: 'Wen Jie\'s personal website',
   image: {
     src: '/hero.jpg',
     alt: 'Website Main Image',
   },
-  email: 'kevinwong865@gmail.com',
+  email: 'behwenjie@u.nus.edu',
   socialLinks: [
     {
       text: 'GitHub',
-      href: '',
+      href: 'https://github.com/wenjebs',
       icon: 'i-simple-icons-github',
       header: 'i-ri-github-line',
     },
     {
-      text: 'Twitter',
-      href: '',
-      icon: 'i-simple-icons-x',
-      header: 'i-ri-twitter-x-line',
-    },
-    {
       text: 'Linkedin',
-      href: '',
+      href: 'https://www.linkedin.com/in/wenjiebeh/',
       icon: 'i-simple-icons-linkedin',
-    },
-    {
-      text: 'Instagram',
-      href: '',
-      icon: 'i-simple-icons-instagram',
-    },
-    {
-      text: 'Youtube',
-      href: '',
-      icon: 'i-simple-icons-youtube',
     },
   ],
   header: {
@@ -47,14 +31,10 @@ export const siteConfig = {
         text: 'Blog',
         href: '/blog',
       },
-      {
-        text: 'Notes',
-        href: '/blog/notes',
-      },
-      {
-        text: 'Talks',
-        href: '/blog/talks',
-      },
+      // {
+      //   text: 'Notes',
+      //   href: '/blog/notes',
+      // },
       {
         text: 'Projects',
         href: '/projects',
@@ -67,14 +47,10 @@ export const siteConfig = {
         text: 'Blog',
         href: '/blog',
       },
-      {
-        text: 'Notes',
-        href: '/blog/notes',
-      },
-      {
-        text: 'Talks',
-        href: '/blog/talks',
-      },
+      // {
+      //   text: 'Notes',
+      //   href: '/blog/notes',
+      // },
     ],
   },
   footer: {
