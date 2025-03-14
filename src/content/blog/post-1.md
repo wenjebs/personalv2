@@ -1,6 +1,6 @@
 ---
-title: Blog Title
-description: Your blog description, which is long text, can be an introduction to the post or a paragraph of the post.
+title: Still under construction!
+description: Oopsie.
 date: 2024-05-01
 ---
 
