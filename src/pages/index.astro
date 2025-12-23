@@ -2,6 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import siteConfig from '@/site-config'
 import Carousel from '@/components/Carousel.vue'
+import FishToggle from '@/components/FishToggle.vue'
 
 const carouselImages = [
   {
@@ -32,23 +33,26 @@ const carouselImages = [
 ---
 
 <BaseLayout description={siteConfig.description}>
+  <FishToggle client:load />
   <article class="prose">
     <h1 class="text-title">Wen Jie</h1>
-    <p>Hey! Im Wen Jie, a sophomore CS student at the National University of Singapore (NUS)</p>
+    <p>Hey! Im Wen Jie, a senior CS student at the National University of Singapore (NUS)</p>
     <p>I like to make apps and participate in hackathons!</p>
     <p>Currently, I'm <b>interning</b> at:</p>
     <ul>
-      <li>Central Provident Fund (Product Developer Intern)</li>
+      <li><img src="/images/padlet.png" alt="Padlet" class="company-logo padlet-logo" />Padlet (Engineering Intern)</li>
+    </ul>
+    <p>I have previously interned at:</p>
+    <ul>
+      <li>
+        <img src="/images/cpf.png" alt="CPF" class="company-logo" />Central Provident Fund (Product Developer Intern)
+      </li>
     </ul>
     <p>
       <b>Right now</b>, I'm:
     </p>
     <ul>
-      <li>Taking an introduction to AI & Machine Learning</li>
-      <li>Reading about networking, databases and operating systems</li>
-      <li>
-        Leetcoding <div class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji:loudly-crying-face"></div>
-      </li>
+      <li>Participating in the NOC Silicon Valley program</li>
     </ul>
 
     <p>
@@ -69,7 +73,15 @@ const carouselImages = [
       </ul>
     </p>
     <div class="carousel-wrapper">
-      <Carousel client:load images={carouselImages} slidesToShow={2} autoplay={false} autoplaySpeed={5000} gap={16} />
+      <Carousel
+        client:load
+        images={carouselImages}
+        slidesToShow={3}
+        rowsToShow={3}
+        autoplay={true}
+        autoplaySpeed={3000}
+        gap={16}
+      />
     </div>
     <!--
     <ul>
@@ -120,7 +132,7 @@ const carouselImages = [
   .carousel-wrapper {
     position: relative;
     width: 100%;
-    margin: 2rem 0;
+    margin: 0.5rem 0;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -133,5 +145,18 @@ const carouselImages = [
       width: 120%; /* Wider than container */
       max-width: 1400px;
     }
+  }
+
+  .company-logo {
+    width: 1.2rem;
+    height: 1.2rem;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0.4rem 0 0;
+  }
+
+  .padlet-logo {
+    transform: translateY(-3px);
   }
 </style>

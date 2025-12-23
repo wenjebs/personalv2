@@ -31,10 +31,12 @@
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/vue": "^5.0.4",
     "@unocss/reset": "^65.4.0",
+    "@yeger/vue-masonry-wall": "^5.1.4",
     "astro": "^5.1.5",
     "nprogress": "^0.2.0",
     "unocss": "^65.4.0",
-    "vue": "^3.5.13"
+    "vue": "^3.5.13",
+    "vue-infinity": "^0.8.5"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.14.0",
